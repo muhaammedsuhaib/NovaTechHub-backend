@@ -9,27 +9,27 @@ const tutorialSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  WhatIs: {
+  whatIs: {
     type: String,
     required: true,
   },
-  Statements: {
+  statements: {
     type: String,
     required: true,
   },
-  Syntax: {
+  syntax: {
     type: String,
     required: true,
   },
-  Comments: {
+  comments: {
     type: String,
     required: true,
   },
-  Variables: {
+  variables: {
     type: String,
     required: true,
   },
-  DataTypes: {
+  dataTypes: {
     type: String,
     required: true,
   },
