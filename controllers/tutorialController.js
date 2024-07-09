@@ -41,3 +41,14 @@ export const getAllTutorials = async (req, res) => {
 };
 
 
+export const getTutorialById = async (req, res) => {
+  try {
+    const tutorial = await Tutorial.findById(req.params.id);
+    if (!tutorial) {
+      return res.status(404).send({ message: "Tutorial not found" });
+    }
+    res.status(200).send(tutorial);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+};
