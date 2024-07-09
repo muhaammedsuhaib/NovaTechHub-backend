@@ -3,6 +3,7 @@ import { configDotenv } from 'dotenv';
 import mongoose from 'mongoose';
 import tutorialRoutes from './routes/tutorialRoutes.js';
 import errorHandler from './middlewares/errorHandler.js';
+import cors from 'cors';
 
 configDotenv();
 
@@ -16,6 +17,11 @@ app.use(express.json());
 mongoose.connect(DB)
 .then(()=>console.log("DB connect"))
 .catch((error)=>console.log("DB connection error",error));
+
+app.use(cors({
+    origin:"http://localhost:3000",
+    credentials:true
+}))
 
 app.use('/api',tutorialRoutes);
 

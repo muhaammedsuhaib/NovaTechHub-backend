@@ -29,3 +29,15 @@ export const createTurolial = async (req, res) => {
   await tutorial.save();
   res.status(201).send(tutorial);
 };
+
+
+export const getAllTutorials = async (req, res) => {
+  try {
+    const tutorials = await Tutorial.find();
+    res.status(200).send(tutorials);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+};
+
+
