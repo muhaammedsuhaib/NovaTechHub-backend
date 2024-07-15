@@ -19,7 +19,7 @@ mongoose.connect(DB)
 .catch((error)=>console.log("DB connection error",error));
 
 app.use(cors({
-    origin:"http://localhost:3000",
+    origin:"https://nova-tech-hub.vercel.app/",
     credentials:true
 }))
 
