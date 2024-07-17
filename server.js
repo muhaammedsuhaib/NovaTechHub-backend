@@ -19,8 +19,8 @@ mongoose.connect(DB)
 .catch((error)=>console.log("DB connection error",error));
 
 app.use(cors({
-    origin:"https://nova-tech-hub.vercel.app/",
-    credentials:true
+    // origin:"https://nova-tech-hub.vercel.app/",
+    // credentials:true
 }))
 
 app.use('/api',tutorialRoutes);
